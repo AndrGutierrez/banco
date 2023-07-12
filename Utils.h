@@ -80,7 +80,13 @@ public:
 		
 	}
 	
-	queue<int> 
+	queue<int>  pasarClienteAtaquilla(queue<int> colaCedulas){
+		queue<int> CopiaColaCedulas = colaCedulas;
+		cout<<"la clave del cliente que sigue en la cola virtual es " << CopiaColaCedulas.front()<<endl;
+		CopiaColaCedulas.pop();
+		return CopiaColaCedulas;
+		
+	}
 	
 
 };
