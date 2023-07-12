@@ -69,7 +69,7 @@ public:
 		int i=cedula.length()-cantidadDigitos;
 		bool cedulaYaAgregada = false;
 		int digitos;
-		char DigitosChar[4];
+
 
 		do{
 			digitos=obtenerTresDigitos(i, cedula, 3);
@@ -79,19 +79,25 @@ public:
 		}
 		while(cedulaYaAgregada && i>=0);
 		if(i<0 && cedulaYaAgregada){
+		
 			
+	
+   			string str = cedula;
+   			char char_arr[str.length() + 1];
+   	
+   			for (int i = 0; i < str.length(); i++) {
+       			char_arr[i] = str[i];
+       			cout<<"llenando cadena"<<endl;
+   			}
+   			cout<<"se invirtio la acosa"<<endl;
+  			char_arr[str.length()] = '\0';
+  			reverse(char_arr);	
+			int size = sizeof(char_arr) / sizeof(char_arr[0]);
+			string Str(char_arr, size);
 			
-			memset(DigitosChar, 0, sizeof(DigitosChar));
-			snprintf(DigitosChar, sizeof(DigitosChar),"%03d", digitos);
-			
-			reverse(DigitosChar);
-			int tamano = sizeof(DigitosChar)/sizeof(DigitosChar[0]);
-			
-			string cadena;
-			cadena.assing(DigitosChar, tamano);
-			int numeros = atoi(cadena);
-			digitos = numeros;
-			
+			cout<<"cedula invertida "<<Str<<endl;
+   			cedula = Str;
+
 			i=cedula.length()-cantidadDigitos;
 			do{
 				digitos=obtenerTresDigitos(i, cedula, 3);
@@ -101,7 +107,7 @@ public:
 			while(cedulaYaAgregada && i>=0);
 		}
 		cola.push(digitos);
-		// imprimirCola(cola);
+		imprimirCola(cola);
 		return cola;
 	}
 
