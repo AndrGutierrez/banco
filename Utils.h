@@ -51,11 +51,15 @@ void reverse(char str[])
     Stack* stack = createStack(n);
 
     int i;
-    for (i = 0; i < n; i++)
-        push(stack, str[i]);
+    for (i = 0; i < n; i++){
+    	push(stack, str[i]);
+	}
+        
 
-    for (i = 0; i < n; i++)
-        str[i] = pop(stack);
+    for (i = 0; i < n; i++){
+    	str[i] = pop(stack);
+	}
+        
 }
 
 
