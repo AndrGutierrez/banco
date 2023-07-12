@@ -68,21 +68,20 @@ public:
 	}
 	
 	
-	void ingresarCedulas(queue<int> colaCedulas){
+	queue<int> ingresarCedulas(queue<int> colaCedulas){
+		
+		queue<int> CopiaColaCedulas = colaCedulas;
 		string cedula;
 		cout<<"Porfavor ingrese su cedula de identidad"<<endl;
 		getline(cin,cedula);			
-		colaCedulas = agregarCedula(colaCedulas, cedula);
-				
+		CopiaColaCedulas= agregarCedula(colaCedulas, cedula);
+		
+		return CopiaColaCedulas;
+		
 	}
 	
-	void pasarClienteAtaquilla(queue<int> cola){
-		
-		cout<<"la clave del cliente que sigue en la cola virtual es " <<cola.front()<<endl;
-		cout<<"el cliente con clave " << cola.front() << " ha sido atendido";
-		cola.pop();
-		
-	}
+	queue<int> 
+	
 
 };
 
