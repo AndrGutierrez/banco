@@ -81,14 +81,13 @@ public:
 		if(i<0 && cedulaYaAgregada){
 
    			string str = cedula;
-   			char char_arr[str.length() + 1];
+   			char char_arr[str.length()];
    	
    			for (int i = 0; i < str.length(); i++) {
        			char_arr[i] = str[i];
 
    			}
-   			
-  			char_arr[str.length()] = '\0';
+   	
   			reverse(char_arr);	
 			int size = sizeof(char_arr) / sizeof(char_arr[0]);
 			string Str(char_arr, size);
