@@ -83,8 +83,15 @@ public:
 			
 			memset(DigitosChar, 0, sizeof(DigitosChar));
 			snprintf(DigitosChar, sizeof(DigitosChar),"%03d", digitos);
-			cout<<"TRES DIGITOS"<<DigitosChar;
+			
 			reverse(DigitosChar);
+			int tamano = sizeof(DigitosChar)/sizeof(DigitosChar[0]);
+			
+			string cadena;
+			cadena.assing(DigitosChar, tamano);
+			int numeros = atoi(cadena);
+			digitos = numeros;
+			
 			i=cedula.length()-cantidadDigitos;
 			do{
 				digitos=obtenerTresDigitos(i, cedula, 3);
