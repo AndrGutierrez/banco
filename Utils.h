@@ -79,17 +79,15 @@ public:
 		}
 		while(cedulaYaAgregada && i>=0);
 		if(i<0 && cedulaYaAgregada){
-		
-			
-	
+
    			string str = cedula;
    			char char_arr[str.length() + 1];
    	
    			for (int i = 0; i < str.length(); i++) {
        			char_arr[i] = str[i];
-       			cout<<"llenando cadena"<<endl;
+
    			}
-   			cout<<"se invirtio la acosa"<<endl;
+   			
   			char_arr[str.length()] = '\0';
   			reverse(char_arr);	
 			int size = sizeof(char_arr) / sizeof(char_arr[0]);
